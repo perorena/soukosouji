@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<base target="_top">
+	<meta name="viewport" content="height=device-height">
+	<meta charset="UTF-8">
+	<title>倉庫掃除</title>
+	<script type="text/javascript">
+	window.onload = function(){
+		if (window !== top){
+			document.getElementById("tra").style.setProperty("visibility", "collapse");
+			window.parent.document.getElementById("bw").style.setProperty("height", document.body.scrollHeight + "px");
+		} else {
+			UpdateViewport();
+		}
+	}
+	window.onpageshow = function(event) {
+		if (event.persisted) {
+			window.location.reload();
+		}
+	}
+	window.onbeforeunload = function() {
+		return;
+	}
+	function UpdateViewport(){
+		let str_viewport;
+		let str_ua = navigator.userAgent.toLowerCase();
+		if (str_ua.indexOf('iphone') >= 0 || str_ua.indexOf('ipad') >= 0 || str_ua.indexOf('android') >= 0 && str_ua.indexOf('mobile') >= 0) {
+			str_viewport = "width=475px";
+		} else {
+			str_viewport = "width=device-width";
+		}
+		document.querySelector("meta[name='viewport']").setAttribute("content", str_viewport);
+	}
+	</script>
+</head>
+<body>
+	<table style="margin: 0px; padding: 0px; border: 0px none; width: 471px">
+		<tr>
+			<td style="text-align: left; background-color: #ccf; margin: 0px; padding: 0px; border: 0px none;">
+				<span style="font-size: x-large; font-weight: 900;">【<ruby>倉庫掃除<rt>そうこそうじ</rt></ruby>】</span>
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align: left; background-color: #fff; font-size: 100%; border: 0px none;">
+				<ruby>指定<rt>してい</rt></ruby>の<ruby>場所<rt>ばしょ</rt></ruby>にすべての<ruby>荷物<rt>にもつ</rt></ruby>を<ruby>運<rt>はこ</rt></ruby>べば、クリアです。<br>
+				<img src="../img/Soukoban.png"><br>
+				<br>
+				<ruby>矢印<rt>やじるし</rt></ruby>キーを<ruby>使<rt>つか</rt></ruby>って、プレーヤーを<ruby>操作<rt>そうさ</rt></ruby>します。<br>
+				・<ruby>荷物<rt>にもつ</rt></ruby>は<ruby>押<rt>お</rt></ruby>すことしかできません。<ruby>荷物<rt>にもつ</rt></ruby>を<ruby>引<rt>ひ</rt></ruby>いて<ruby>動<rt>うご</rt></ruby>かすことはできません。<br>
+				・<ruby>荷物<rt>にもつ</rt></ruby>は<ruby>一度<rt>いちど</rt></ruby>にひとつしか<ruby>押<rt>お</rt></ruby>すことができません。<br>
+				・プレーヤーが<ruby>壁<rt>かべ</rt></ruby>や<ruby>荷物<rt>にもつ</rt></ruby>を<ruby>通<rt>とお</rt></ruby>り<ruby>抜<rt>ぬ</rt></ruby>けることはできません。<br>
+				・すべての<ruby>荷物<rt>にもつ</rt></ruby>を<ruby>指定<rt>してい</rt></ruby>された<ruby>場所<rt>ばしょ</rt></ruby>（<ruby>黄色<rt>きいろ</rt></ruby>の●<ruby>印<rt>しるし</rt></ruby>）へ<ruby>運<rt>はこ</rt></ruby>べばクリアとなります。<br>
+				[<ruby>RESET<rt>りせっと</rt></ruby>]ボタンをクリックすると<ruby>最初<rt>さいしょ</rt></ruby>からやり<ruby>直<rt>なお</rt></ruby>す<ruby>事<rt>こと</rt></ruby>ができます。<br><br>
+				<a href="javascript:history.back();"><ruby>戻<rt>もど</rt></ruby>る</a>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

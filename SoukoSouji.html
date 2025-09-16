@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<base target="_top">
+		<meta name="viewport" content="height=device-height">
+		<meta charset="UTF-8">
+		<title>倉庫掃除</title>
+		<!-- CSS -->
+		<link type="text/css" rel="stylesheet" href="./SoukoSouji.css">
+	</head>
+<body>
+	<table>
+		<tr>
+			<td colspan="5" style="width:460px; height: 110px; text-align: center; vertical-align: middle; background-color: #ccf; border: none; border-radius: 20px;">
+				<span id="title_line" style="font-weight: bold; font-size: x-large; border: none; margin:0px;padding: 0px; letter-spacing: 1px;">
+					【<ruby>倉庫掃除<rt>そうこそうじ</rt></ruby>】
+				</span>
+				<br><br>
+				<span id="copy_right" style="font-weight: bold; font-size: large; letter-spacing: 0px;">
+					<small>
+						<button style="width: 150px; border-radius: 20px;" onclick='window.open("./SoukoSoujiHelp.html")'>遊び方</button>&nbsp;&nbsp;&nbsp;
+						<button style="width: 150px; border-radius: 20px;" onclick='window.open("../index.html")'>一覧</button>
+					</small>
+				</span>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="5" style="width:460px; height:30px; vertical-align: top; border: 1px solid #000; margin: 0px; padding: 0px;">
+			<label>1～50までの数字をいれてください。<input type="number" id="dataNumber" value="1" min="1" max="50"></label>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 61px; height: 55px; border:0px; padding: 0; margin: 0px;">
+				<!-- w.png -->
+				<button id="lbtn" type="button" value="←" style="width: 61px; height: 55px; text-align: center; vertical-align: middle; padding: 0; margin: 0px; font-weight: bold; font-size: large; border-radius: 5px; background-color: #eee;">
+					<img src="../img/w.png">
+				</button>
+			</td>
+			<td style="width: 61px; height: 55px; border:0px; padding: 0; margin: 0px;">
+				<!-- n.png -->
+				<button id="ubtn" type="button" value="↑" style="width: 61px; height: 55px; text-align: center; vertical-align: middle; padding: 0; margin: 0px; font-weight: bold; font-size: large; border-radius: 5px; background-color: #eee;">
+					<img src="../img/n.png">
+				</button>
+			</td>
+			<td style="width: 61px; height: 55px; border:0px; padding: 0; margin: 0px;">
+				<!-- s.png -->
+				<button id="dbtn" type="button" value="↓" style="width: 61px; height: 55px; text-align: center; vertical-align: middle; padding: 0; margin: 0px; font-weight: bold; font-size: large; border-radius: 5px; background-color: #eee;">
+					<img src="../img/s.png">
+				</button>
+			</td>
+			<td style="width: 61px; height: 55px; border:0px; padding: 0; margin: 0px;">
+				<!-- e.png -->
+				<button id="rbtn" type="button" value="→" style="width: 61px; height: 55px; text-align: center; vertical-align: middle; padding: 0; margin: 0px; font-weight: bold; font-size: large; border-radius: 5px; background-color: #eee;">
+					<img src="../img/e.png">
+				</button>
+			</td>
+			<td style="width: 61px; height: 55px; border:0px; padding: 0; margin: 0px;">
+				<button id="reset" type="button" value="RESET" style="width: 61px; height: 55px; padding: 0; margin: 0px; font-weight: 900; border-radius: 5px; background-color: #eee;">
+					<ruby>RESET<rt>りせっと</rt></ruby>
+				</button>
+			</td>
+		</tr>
+	</table>
+	<div id="successImage"></div>
+	<div id="mainScreen"></div>
+	<!-- JavaScript -->
+	<script type="text/javascript" src="./SoukoSoujiData.js"></script>
+	<script type="text/javascript" src="./SoukoSouji.js"></script>
+
+</body>
+</html>
