@@ -1,5 +1,6 @@
 const IdSeparator = '#';
-const Root = '../img/';
+//const Root = '../img/';
+const Root = './';
 const SuccessImageSrc = Root + 'clear.png';
 const RengaImageSrc = Root + 'renga.png';
 const BoxImageSrc = Root + 'box1.png';
@@ -395,3 +396,4 @@ function UpdateViewport() {
 	}
 	document.querySelector("meta[name='viewport']").setAttribute("content", str_viewport);
 }
+
