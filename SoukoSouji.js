@@ -390,11 +390,12 @@ function UpdateViewport() {
 	let str_viewport;
 	let str_ua = navigator.userAgent.toLowerCase();
 	if (str_ua.indexOf('iphone') >= 0 || str_ua.indexOf('ipad') >= 0 || str_ua.indexOf('android') >= 0 && str_ua.indexOf('mobile') >= 0) {
-		str_viewport = "width='475px' maximum-scale='1.0'";
+		str_viewport = "width=475px";
 	} else {
-		str_viewport = "height='device-height' maximum-scale='1.0'";
+		str_viewport = "height=device-height";
 	}
 	document.querySelector("meta[name='viewport']").setAttribute("content", str_viewport);
 }
+
 
 
