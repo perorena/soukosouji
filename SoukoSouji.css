@@ -3,6 +3,11 @@ table {border: none; margin: 0px; padding: 0px;}
 tr {border: none; margin: 0px; padding: 0px;}
 /* td {width:60px; height:60px; vertical-align: top; border: 1px solid #000; margin: 0px; padding: 0px;} */
 
+/* 問題番号入力 */
+#dataNumber {
+    font-size: 16px;
+}
+
 /* 倉庫テーブル */
 #souko {
     padding: 0px;
@@ -55,3 +60,4 @@ tr {border: none; margin: 0px; padding: 0px;}
     width: 50px;
     height: 50px;
 }
+
