@@ -5,7 +5,7 @@ tr {border: none; margin: 0px; padding: 0px;}
 
 /* 問題番号入力 */
 #dataNumber {
-    font-size: 16px;
+    font-size: 20px;
 }
 
 /* 倉庫テーブル */
@@ -60,4 +60,5 @@ tr {border: none; margin: 0px; padding: 0px;}
     width: 50px;
     height: 50px;
 }
+
 
